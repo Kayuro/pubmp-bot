@@ -31,6 +31,6 @@ Un `/pub` est intégré.
 
 Le bot va maintenant envoyer le message personnalisé contenant le lien à tous les membres du serveur et quittera automatiquement le serveur.
 
-### Licence
+## Licence
 
 Ce programme est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
