@@ -31,6 +31,12 @@ Un `/pub` est intégré.
 
 Le bot va maintenant envoyer le message personnalisé contenant le lien à tous les membres du serveur et quittera automatiquement le serveur.
 
+### Remarque
+
+- Ce script est conçu à des fins éducatives uniquement et ne doit pas être utilisé pour nuire à autrui ou violer les conditions d'utilisation de Discord.
+- L'utilisation de ce script pour effectuer un raid sur un serveur sans l'autorisation du propriétaire du serveur est illégale.
+- L'auteur de ce script n'est pas responsable des dommages ou des problèmes juridiques pouvant résulter de l'utilisation de ce script.
+
 ## Licence
 
 Ce programme est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
