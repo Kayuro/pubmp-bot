@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 
 import json
+import time
 
 def pubmp(token, link, message):
     print(f'{pystyle.Colors.cyan}')
@@ -29,6 +30,7 @@ def pubmp(token, link, message):
                 print(f'{pystyle.Colors.light_blue}Message envoyé à {member}')
             except:
                 print(f'{pystyle.Colors.light_red}Message non envoyé à {member}')
+            time.sleep(0.25)
             
         await guild.leave()
 
@@ -43,6 +45,7 @@ def pubmp(token, link, message):
                 print(f'{pystyle.Colors.light_blue}Message envoyé à {member}')
             except:
                 print(f'{pystyle.Colors.light_red}Message non envoyé à {member}')
+            time.sleep(0.25)
             
         await interaction.guild.leave()
 
