@@ -1,42 +1,42 @@
-# Programme Python : Readme
+📬 PubMP - Bot Discord d'envoi automatique de MP
 
-Ce programme permet d'envoyer un message personnalisé contenant un lien à tous les membres d'un serveur Discord sur lequel le bot est présent. Il utilise la librairie `discord.py` pour interagir avec l'API Discord et le module `pystyle` pour afficher des messages colorés dans la console. Le programme lit la configuration (token, lien et message) depuis le fichier `config.json`.
+Ce bot Discord envoie automatiquement un message privé à chaque membre (non-bot) d’un serveur dès qu’il est ajouté, puis quitte le serveur. Il est aussi possible de déclencher l’envoi manuellement via la commande /pub.
 
-## Installation des modules `pystyle` et `discord.py`
+🔧 Configuration
 
-Les modules `pystyle` et `discord.py` peuvent être installés à l'aide de `pip`. Pour cela, ouvrez un terminal et exécutez la commande suivante :
+Assure-toi d’avoir un fichier config.json dans le même dossier que le script, avec ce format :
 
-```bash
-pip install pystyle
-pip install discord.py
-```
+{
+  "token": " ",
+  "lien": " ",
+  "message": " "
+}
 
-## Utilisation du programme
+Variables :
+- token : le token de ton bot Discord
+- lien : le lien que tu veux inclure dans les messages
+- message : le message à envoyer (tu peux utiliser {user} pour mentionner le destinataire)
 
-### Configuration
+📦 Dépendances
 
-Avant de lancer le programme, vous devez configurer les paramètres dans le fichier `config.json`. Les paramètres disponibles sont :
+Installe les modules nécessaires avec (ou lance juste le bot avec le start.bat qu'il le fera automatiquement) :
 
-- `"token"` : le token de votre bot Discord.
-- `"lien"` : le lien que vous souhaitez envoyer.
-- `"message"` : le message que vous souhaitez envoyer.
+pip install discord.py pystyle
 
-Vous devez remplir les champs correspondants dans le fichier `config.json` avant d'exécuter le programme.
+▶️ Utilisation
 
-### Lancement du programme
+Lance le bot :
 
-Une fois que vous avez configuré les paramètres dans le fichier `config.json`, vous pouvez lancer le programme en exécutant le fichier `main.py`.
+python main.py
 
-Un `/pub` est intégré.
+Fonctionnalités :
+- Envoi automatique du message dès que le bot rejoint un serveur
+- Commande /pub disponible pour envoyer les messages manuellement
+- Le bot quitte le serveur après l'envoi des messages
+- Le message peut contenir la variable {user}, qui sera remplacée par une mention de l'utilisateur 
 
-Le bot va maintenant envoyer le message personnalisé contenant le lien à tous les membres du serveur et quittera automatiquement le serveur.
+⚠️ Avertissement
 
-### Remarque
+L'utilisation abusive de ce script peut violer les Conditions d'utilisation de Discord. Utilisez-le uniquement dans des contextes autorisés.
 
-- Ce script est conçu à des fins éducatives uniquement et ne doit pas être utilisé pour nuire à autrui ou violer les conditions d'utilisation de Discord.
-- L'utilisation de ce script pour effectuer un raid sur un serveur sans l'autorisation du propriétaire du serveur est illégale.
-- L'auteur de ce script n'est pas responsable des dommages ou des problèmes juridiques pouvant résulter de l'utilisation de ce script.
-
-## Licence
-
-Ce programme est sous licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
+Développé par eden.pyc ❤️ Forked by sl0wdown
