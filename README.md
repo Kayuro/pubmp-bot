@@ -8,7 +8,9 @@ Assure-toi d’avoir un fichier config.json dans le même dossier que le script,
 
 {
   "token": " ",
+
   "lien": " ",
+
   "message": " "
 }
 
