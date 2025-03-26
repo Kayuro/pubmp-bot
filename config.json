@@ -1,5 +1,5 @@
 {
     "token" : "",
     "lien" : "",
-    "message" : "" # met {user} dans ton message si tu veux ping l'utilisateur ;)
+    "message" : ""
 }
