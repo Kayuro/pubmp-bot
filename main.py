@@ -1,11 +1,11 @@
-from watermark import *
-import pystyle
-import discord
-from discord.ext import commands
-
+import asyncio
 import json
 import time
-import asyncio
+
+import discord
+from discord.ext import commands
+from watermark import *
+import pystyle
 
 def pubmp(token, link, message):
     print(f'{pystyle.Colors.cyan}')
@@ -14,16 +14,14 @@ def pubmp(token, link, message):
     intents.presences = True
 
     bot = commands.Bot(command_prefix=".", intents=intents)
-    semaphore = asyncio.Semaphore(10)
+    semaphore = asyncio.Semaphore(1)
 
     @bot.event
     async def on_ready():
         bot_id = bot.user.id
         invite_link = f"https://discord.com/oauth2/authorize?client_id={bot_id}&permissions=8&scope=bot%20applications.commands"
-        
         print(f'\n{pystyle.Colors.dark_green}{bot.user} {pystyle.Colors.light_green}est prêt !')
         print(f'{pystyle.Colors.yellow}🔗 Lien d\'invitation du bot : {invite_link}')
-
         try:
             await bot.tree.sync()
         except Exception as e:
@@ -37,6 +35,7 @@ def pubmp(token, link, message):
                 print(f'{pystyle.Colors.light_blue}Message envoyé à {member}')
             except:
                 print(f'{pystyle.Colors.light_red}Message non envoyé à {member}')
+            await asyncio.sleep(0.6)
 
     async def send_messages_to_all(members, msg, link):
         tasks = [send_message(member, msg, link) for member in members if not member.bot]
