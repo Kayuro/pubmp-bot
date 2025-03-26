@@ -50,7 +50,7 @@ def pubmp(token, link, message):
         await guild.leave()
         print(f'{pystyle.Colors.red}❌ Quitte le serveur : {guild.name}')
 
-    @bot.tree.command(name='pub', description='bien vu pour le pub mp')
+    @bot.tree.command(name='pub', description='Lancez le pub-mp')
     async def pub(interaction: discord.Interaction):
         print(f'{pystyle.Colors.light_blue}Commande /pub exécutée')
         await send_messages_to_all(interaction.guild.members, message, link)
