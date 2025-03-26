@@ -7,11 +7,13 @@ Ce bot Discord envoie automatiquement un message privé à chaque membre (non-bo
 Assure-toi d’avoir un fichier config.json dans le même dossier que le script, avec ce format :
 
 {
+
   "token": " ",
 
   "lien": " ",
 
   "message": " "
+
 }
 
 Variables :
@@ -23,13 +25,13 @@ Variables :
 
 Installe les modules nécessaires avec (ou lance juste le bot avec le start.bat qu'il le fera automatiquement) :
 
-pip install discord.py pystyle
+`pip install discord.py pystyle`
 
 ▶️ Utilisation
 
 Lance le bot :
 
-python main.py
+`python main.py`
 
 Fonctionnalités :
 - Envoi automatique du message dès que le bot rejoint un serveur
